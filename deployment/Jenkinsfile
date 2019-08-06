@@ -29,11 +29,6 @@ pipeline {
                 sh 'mvn -Dfabric8.mode=openshift fabric8:resource fabric8:build' 
             }
         }
-		
-		stage ('Openshift Deploy') {
-            steps {
-                sh 'mvn -DskipTests fabric8:deploy'
-            }
-        }
+
     }
 }
